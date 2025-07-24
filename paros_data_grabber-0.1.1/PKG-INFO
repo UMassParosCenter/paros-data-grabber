@@ -1,3 +1,27 @@
+Metadata-Version: 2.4
+Name: paros_data_grabber
+Version: 0.1.1
+Summary: A package to query Parosbox InfluxDB data securely
+Author: Ethan Gelfand
+Author-email: egelfand@umass.edu
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: influxdb-client
+Requires-Dist: pandas
+Requires-Dist: scipy
+Requires-Dist: cryptography
+Requires-Dist: pytz
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
 # paros_data_grabber
 
 A Python package to securely query Parosbox InfluxDB data using encrypted credentials.
