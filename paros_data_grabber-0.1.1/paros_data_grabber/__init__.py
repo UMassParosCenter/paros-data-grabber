@@ -55,7 +55,7 @@ def process_influx_df(df, output_tz):
     id_str = f"{cur_box}_{cur_id}"
 
     out_df = df.drop(columns=["result", "table", "_measurement", "id"], errors='ignore')
-    out_df.drop(columns=[col for col in ["baro_time", "err"] if col in out_df], inplace=True, errors='ignore')
+    out_df.drop(columns=[col for col in ["baro_time", "sys_time", "err"] if col in out_df], inplace=True, errors='ignore')
     out_df.rename(columns={'_time': 'time'}, inplace=True)
     out_df["time"] = out_df["time"].dt.tz_convert(output_tz).dt.tz_localize(None)
     out_df["time"] = (out_df["time"] - pd.Timestamp("1970-01-01")) / pd.Timedelta('1s')
